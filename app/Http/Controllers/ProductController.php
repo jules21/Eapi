@@ -17,14 +17,15 @@ class ProductController extends Controller
     public function index()
     {
         //
-//        return ProductResource::collection(Product::all());
+        return ProductResource::collection(Product::paginate(20));
 //        return Product::all();
 //        return new ProductCollection(Product::all()); this is error
 
 //        this works fine without modifying data
 //        return new ProductCollection(Product::all());
 
-        return ProductCollection::collection(Product::all());
+//        failed to work
+//        return ProductCollection::collection(Product::all());
 
     }
 
